@@ -1,0 +1,64 @@
+---
+description: gitのcommitをお願いされた時に参照するルール
+globs:
+alwaysApply: false
+---
+
+# 100-git-commit.mdc
+- このファイルが読み込まれたら最初に「100-git-commit.mdcを読み込みました！」と作業着手前にユーザーに必ず伝えてください。
+- 指定されていない場合は絶対にgitの操作をしないでください。
+
+--
+
+# 概要
+このドキュメントでは、コミットルールに関するベストプラクティスを説明します。
+
+## コミットメッセージのルール
+Conventional Commits
+
+### コミットメッセージの基本構造
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Type の種類(必須)
+build: ビルドシステムまたは外部依存関係に影響する変更（例: npm, webpack）
+ci: CI構成ファイルとスクリプトの変更（例: GitHub Actions）
+docs: ドキュメントのみの変更
+feat: 新しい機能
+fix: バグ修正
+perf: パフォーマンスを向上させるコード変更
+refactor: バグを修正したり機能を追加したりしないコード変更
+style: コードの意味に影響を与えない変更（空白、書式、セミコロンの欠落など）
+test: 不足しているテストの追加または既存のテストの修正
+
+### Body (任意)
+- 変更内容の詳細な説明
+- 改行して複数行で記述可能
+- 各行72文字以内を推奨
+
+### Footer (任意)
+- Breaking Changes の記述
+- 関連するIssueやPRへの参照
+
+### コミットメッセージの例
+```
+feat: Add JWT authentication
+
+- Implement JWT token generation
+- Add token validation middleware
+- Create user authentication endpoints
+
+Closes #123
+```
+
+### 注意事項
+- コミットは論理的な単位で行う（複数の機能変更を1つのコミットに含めない）
+- 変更内容が大きい場合は、複数の小さなコミットに分割する
+- コミットメッセージは日本語で記述する場合も、type は英語を使用する
+
+
