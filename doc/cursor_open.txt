@@ -38,8 +38,8 @@ Open in a new Cursor window (even if a window exists for this workspace):
 <
 
 Or use the default key mappings:
-- <leader>oc - Open in Cursor
-- <leader>oC - Open in new Cursor window
+- <leader>oc - [O]pen in [C]ursor
+- <leader>oC - [O]pen in [C]ursor (new window)
 
 ==============================================================================
 4. SETUP                                                  *cursor_open-setup*
