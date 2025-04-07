@@ -73,12 +73,12 @@ function M.setup(opts)
     -- キーマッピングの設定
     if config.keymaps.open then
         vim.keymap.set('n', config.keymaps.open, ':CursorOpen<CR>',
-            { desc = 'Open in Cursor', noremap = true, silent = true })
+            { desc = '[O]pen in [C]ursor', noremap = true, silent = true })
     end
 
     if config.keymaps.open_new then
         vim.keymap.set('n', config.keymaps.open_new, ':CursorOpen!<CR>',
-            { desc = 'Open in Cursor (new window)', noremap = true, silent = true })
+            { desc = '[O]pen in [C]ursor (new window)', noremap = true, silent = true })
     end
 end
 
