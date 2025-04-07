@@ -1,0 +1,92 @@
+*cursor_open.txt*  Open files in Cursor directly from Neovim
+
+==============================================================================
+CONTENTS                                                  *cursor_open-contents*
+
+  1. Introduction ................. |cursor_open-introduction|
+  2. Requirements ................. |cursor_open-requirements|
+  3. Usage ........................ |cursor_open-usage|
+  4. Setup ........................ |cursor_open-setup|
+  5. Configuration ................ |cursor_open-configuration|
+  6. Commands ..................... |cursor_open-commands|
+  7. About ........................ |cursor_open-about|
+
+==============================================================================
+1. INTRODUCTION                                      *cursor_open-introduction*
+
+cursor_open.nvim is a Neovim plugin that allows you to open files in Cursor
+directly from Neovim. It preserves your cursor position and attempts to detect
+Git repositories to use proper workspace handling.
+
+==============================================================================
+2. REQUIREMENTS                                      *cursor_open-requirements*
+
+- Neovim 0.5.0+
+- Cursor installed and available in your system PATH
+
+==============================================================================
+3. USAGE                                                  *cursor_open-usage*
+
+Open the current file in Cursor at the current cursor position:
+>
+  :CursorOpen
+<
+
+Open in a new Cursor window (even if a window exists for this workspace):
+>
+  :CursorOpen!
+<
+
+Or use the default key mappings:
+- <leader>oc - Open in Cursor
+- <leader>oC - Open in new Cursor window
+
+==============================================================================
+4. SETUP                                                  *cursor_open-setup*
+
+Setup with default options:
+>
+  require('cursor_open').setup()
+<
+
+With custom options:
+>
+  require('cursor_open').setup({
+    keymaps = {
+      open = '<leader>oc',
+      open_new = '<leader>oC',
+    },
+  })
+<
+
+==============================================================================
+5. CONFIGURATION                                    *cursor_open-configuration*
+
+                                                *cursor_open.setup()*
+setup({opts})                  Initialize the plugin with options
+
+Options:                                           *cursor_open-options*
+
+  keymaps                        Key mappings configuration
+    open                         Open current file in Cursor
+                                 Default: <leader>oc
+    open_new                     Open in new Cursor window
+                                 Default: <leader>oC
+
+==============================================================================
+6. COMMANDS                                            *cursor_open-commands*
+
+                                                    *:CursorOpen*
+:CursorOpen                    Open the current file in Cursor
+
+                                                    *:CursorOpen!*
+:CursorOpen!                   Open in a new Cursor window
+
+==============================================================================
+7. ABOUT                                                  *cursor_open-about*
+
+cursor_open.nvim is developed by yuucu and is available under MIT license.
+
+GitHub: https://github.com/yuucu/cursor_open.nvim
+
+ vim:tw=78:ts=8:ft=help:norl: 
