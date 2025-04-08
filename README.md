@@ -2,11 +2,19 @@
 
 A Neovim plugin that allows you to open files in [Cursor](https://cursor.sh/) directly from Neovim.
 
+
+
+
+https://github.com/user-attachments/assets/36b07cf0-71d3-44e8-af9e-7bdee68a690d
+
+
+
 ## Features
 
 - Open the current file in Cursor at the exact cursor position
 - Smart workspace detection for Git repositories
 - Option to open in a new Cursor window or reuse existing ones
+
 
 ## Installation
 
